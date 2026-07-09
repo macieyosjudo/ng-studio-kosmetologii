@@ -16,8 +16,8 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6 sm:py-24 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-10 lg:gap-16 items-center">
-          <div className="order-2 sm:order-1">
+        <div className="grid grid-cols-[1.4fr_1fr] sm:grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-10 lg:gap-16 items-center">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
               className="hidden sm:inline-flex items-center gap-2 bg-white/70 border border-rose-200 text-rose-600 rounded-full px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-medium mb-3 sm:mb-6"
@@ -101,9 +101,9 @@ export default function Hero() {
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="order-1 sm:order-2 flex items-center justify-center"
+            className="flex items-center justify-center"
           >
-            <div className="relative w-32 sm:w-72 lg:w-80">
+            <div className="relative w-24 sm:w-72 lg:w-80">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-rose-300/50 to-rose-400/30 blur-xl sm:blur-2xl scale-110" aria-hidden="true" />
               <div className="relative aspect-square rounded-full overflow-hidden ring-2 sm:ring-4 ring-white shadow-soft">
                 <img
@@ -112,7 +112,7 @@ export default function Hero() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-1.5 -right-1.5 w-8 h-8 sm:-bottom-2 sm:-right-2 sm:w-16 sm:h-16 rounded-full bg-white shadow-soft ring-1 ring-rose-100 flex items-center justify-center p-1.5 sm:p-2.5">
+              <div className="absolute -bottom-1 -right-1 w-7 h-7 sm:-bottom-2 sm:-right-2 sm:w-16 sm:h-16 rounded-full bg-white shadow-soft ring-1 ring-rose-100 flex items-center justify-center p-1 sm:p-2.5">
                 <img src="/logo-mark.png" alt="" className="w-full h-full object-contain" aria-hidden="true" />
               </div>
             </div>
