@@ -36,7 +36,7 @@ const services = [
   },
   {
     Icon: Droplets,
-    title: 'Oczyszczanie wodorowe',
+    title: 'Wodorowe oczyszczanie twarzy',
     desc: 'Głębokie, delikatne oczyszczanie skóry twarzy z użyciem technologii wodorowej.',
     color: 'from-sky-300 to-rose-300',
   },
