@@ -100,15 +100,12 @@ export default function Testimonials() {
                 <blockquote className="text-plum/75 text-[11px] sm:text-sm leading-snug sm:leading-relaxed flex-1 line-clamp-5 sm:line-clamp-none">
                   “{r.text}”
                 </blockquote>
-                <figcaption className="mt-2 pt-2 sm:mt-5 sm:pt-4 border-t border-rose-50 flex items-center justify-between gap-1">
-                  <div className="min-w-0">
-                    <div className="text-xs sm:text-sm font-semibold text-plum truncate">{r.name}</div>
-                    <div className="text-[10px] sm:text-xs text-plum/70 truncate">{r.source} · {r.time}</div>
-                  </div>
-                  <div className="hidden sm:flex flex-shrink-0" aria-hidden="true">
-                    {Array.from({ length: 5 }).map((_, s) => (
-                      <Star key={s} size={13} className="fill-rose-400 text-rose-400" />
-                    ))}
+                <figcaption className="mt-2 pt-2 sm:mt-5 sm:pt-4 border-t border-rose-50">
+                  <div className="text-xs sm:text-sm font-semibold text-plum truncate">{r.name}</div>
+                  <div className="flex items-center gap-1 text-[10px] sm:text-xs text-plum/70 truncate">
+                    {r.source} ·
+                    <Star size={11} className="fill-rose-400 text-rose-400 flex-shrink-0" aria-hidden="true" />
+                    5
                   </div>
                 </figcaption>
               </figure>
