@@ -4,7 +4,7 @@ import SectionReveal from './SectionReveal'
 const points = [
   'Indywidualne podejście do każdej klientki',
   'Fachowa wiedza poparta wieloletnim doświadczeniem',
-  'Naprawa i korekta ust po zabiegach w innych gabinetach',
+  'Zabiegi z zakresu medycyny estetycznej i kosmetologii',
   'Dokładne wyjaśnienie przebiegu zabiegu i pielęgnacji pozabiegowej',
   'Ciepła, przyjazna atmosfera gabinetu',
 ]
@@ -31,10 +31,10 @@ export default function About() {
             Poznaj Natalię
           </h2>
           <p className="text-plum/70 text-lg leading-relaxed mb-6">
-            Natalia to kosmetolog prowadząca NG Studio Kosmetologii w Żywcu, znana klientkom
-            przede wszystkim z precyzyjnego modelowania i powiększania ust oraz umiejętności
-            skutecznej korekty ust po nieudanych zabiegach wykonanych gdzie indziej. Łączy
-            fachową wiedzę z uważnością na potrzeby i oczekiwania każdej klientki.
+            Natalia to kosmetolog prowadząca NG Studio Kosmetologii w Żywcu, specjalizująca się
+            w redukcji zmarszczek, wolumetrii twarzy, mezoterapii igłowej oraz wodorowym
+            oczyszczaniu twarzy. Łączy fachową wiedzę z uważnością na potrzeby i oczekiwania
+            każdej klientki.
           </p>
           <ul className="space-y-3" role="list">
             {points.map((p) => (

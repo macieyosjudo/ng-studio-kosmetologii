@@ -37,9 +37,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-plum/70 leading-relaxed mb-8 max-w-lg"
             >
-              NG Studio Kosmetologii to gabinet Natalii w Żywcu — modelowanie i powiększanie ust,
-              oczyszczanie wodorowe oraz pielęgnacja skóry. Indywidualne podejście, fachowa wiedza
-              i efekty, które od lat polecają klientki.
+              NG Studio Kosmetologii to gabinet Natalii w Żywcu — redukcja zmarszczek, wolumetria
+              twarzy, mezoterapia igłowa oraz wodorowe oczyszczanie twarzy. Indywidualne podejście,
+              fachowa wiedza i efekty, które od lat polecają klientki.
             </motion.p>
 
             <motion.div

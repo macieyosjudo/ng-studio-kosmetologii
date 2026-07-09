@@ -1,6 +1,6 @@
 # NG Studio Kosmetologii
 
-Strona internetowa dla NG Studio Kosmetologii — gabinetu kosmetologii estetycznej Natalii w Żywcu (modelowanie i powiększanie ust, oczyszczanie wodorowe, pielęgnacja skóry).
+Strona internetowa dla NG Studio Kosmetologii — gabinetu kosmetologii estetycznej Natalii w Żywcu (redukcja zmarszczek, wolumetria twarzy, mezoterapia igłowa, wodorowe oczyszczanie twarzy).
 
 ## Uruchomienie lokalne
 
@@ -17,4 +17,4 @@ npm run build
 
 ## Do uzupełnienia przez właściciela
 
-W kilku miejscach na stronie (sekcja Kontakt, stopka) celowo pozostawiono odnośniki do Instagrama i Google Maps zamiast wymyślonego numeru telefonu czy adresu — te dane warto uzupełnić bezpośrednio w `src/constants.js` oraz `src/components/Contact.jsx`, gdy będą znane dokładny adres, telefon i godziny otwarcia.
+Sekcja Galeria (`src/pages/GaleriaPage.jsx`) korzysta na razie z podpisanych placeholderów zamiast prawdziwych zdjęć — uzupełnij pole `src` w tablicy `galleryItems`, gdy zdjęcia będą dostępne (pliki wrzuć do `public/gallery/`).
