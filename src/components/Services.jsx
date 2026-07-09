@@ -43,12 +43,13 @@ export default function Services() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {services.map(({ Icon, title, desc, color }, i) => (
             <SectionReveal key={title} delay={(i % 4) * 0.1}>
-              <div className="group bg-white border border-rose-100/80 rounded-2xl p-4 sm:p-7 hover:-translate-y-2 hover:shadow-soft transition-all duration-300 h-full">
-                <div className={`w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center mb-3 sm:mb-5 shadow-md group-hover:scale-110 transition-transform duration-300`}>
+              <div className="group relative bg-white border border-rose-100/80 rounded-2xl p-4 sm:p-7 overflow-hidden hover:-translate-y-1.5 hover:border-rose-200 hover:shadow-soft transition-all duration-300 h-full">
+                <div className={`absolute -top-8 -right-8 w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br ${color} opacity-[0.08] blur-xl group-hover:opacity-[0.14] transition-opacity duration-300`} aria-hidden="true" />
+                <div className={`relative w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br ${color} flex items-center justify-center mb-3 sm:mb-5 shadow-md ring-4 ring-white group-hover:scale-110 transition-transform duration-300`}>
                   <Icon size={20} className="sm:w-6 sm:h-6" color="white" strokeWidth={1.8} aria-hidden="true" />
                 </div>
-                <h3 className="text-sm sm:text-lg font-semibold text-plum mb-1 sm:mb-2 font-display">{title}</h3>
-                <p className="text-plum/70 text-xs sm:text-sm leading-relaxed">{desc}</p>
+                <h3 className="relative text-sm sm:text-lg font-semibold text-plum mb-1 sm:mb-2 font-display">{title}</h3>
+                <p className="relative text-plum/70 text-xs sm:text-sm leading-relaxed">{desc}</p>
               </div>
             </SectionReveal>
           ))}
