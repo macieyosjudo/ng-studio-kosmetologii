@@ -25,9 +25,9 @@ export default function GaleriaPage() {
         subtitle="Wnętrze gabinetu i efekty zabiegów NG Studio Kosmetologii"
       />
 
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white" aria-label="Galeria zdjęć">
+      <section className="py-6 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white" aria-label="Galeria zdjęć">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
             {galleryItems.map(({ src, alt, Icon, gradient }, i) => (
               <SectionReveal key={alt} delay={(i % 4) * 0.06}>
                 <figure className="group relative aspect-square rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-shadow duration-300">

@@ -51,29 +51,29 @@ export default function CennikPage() {
         subtitle="Pełna lista zabiegów NG Studio Kosmetologii wraz z cenami"
       />
 
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white" aria-label="Cennik">
-        <div className="max-w-4xl mx-auto space-y-10">
+      <section className="py-8 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white" aria-label="Cennik">
+        <div className="max-w-4xl mx-auto space-y-4 sm:space-y-10">
           {categories.map((cat, ci) => (
             <SectionReveal key={cat.title} delay={ci * 0.05}>
-              <div className="bg-rose-50/40 border border-rose-100/80 rounded-2xl p-6 sm:p-8">
-                <div className="flex items-center gap-2.5 mb-5">
+              <div className="bg-rose-50/40 border border-rose-100/80 rounded-2xl p-4 sm:p-8">
+                <div className="flex items-center gap-2 sm:gap-2.5 mb-2 sm:mb-5">
                   <Sparkles size={18} className="text-rose-500" aria-hidden="true" />
-                  <h2 className="font-display text-xl sm:text-2xl font-semibold text-plum">{cat.title}</h2>
+                  <h2 className="font-display text-base sm:text-2xl font-semibold text-plum">{cat.title}</h2>
                 </div>
                 <ul className="divide-y divide-rose-100" role="list">
                   {cat.items.map((item) => (
-                    <li key={item.name} className="py-4 first:pt-0 last:pb-0">
-                      <div className="flex items-start justify-between gap-4">
+                    <li key={item.name} className="py-2.5 sm:py-4 first:pt-0 last:pb-0">
+                      <div className="flex items-start justify-between gap-3 sm:gap-4">
                         <div>
-                          <p className="font-medium text-plum">{item.name}</p>
-                          {item.note && <p className="text-sm text-plum/60 mt-0.5">{item.note}</p>}
+                          <p className="text-sm sm:text-base font-medium text-plum">{item.name}</p>
+                          {item.note && <p className="text-xs sm:text-sm text-plum/70 mt-0.5">{item.note}</p>}
                         </div>
-                        <span className="font-display text-lg font-semibold text-rose-600 whitespace-nowrap">{item.price}</span>
+                        <span className="font-display text-base sm:text-lg font-semibold text-rose-600 whitespace-nowrap">{item.price}</span>
                       </div>
                       {item.note2 && (
-                        <div className="flex items-start justify-between gap-4 mt-2 pt-2 border-t border-dashed border-rose-100">
-                          <p className="text-sm text-plum/60">{item.note2}</p>
-                          <span className="font-display text-base font-semibold text-rose-500 whitespace-nowrap">{item.price2}</span>
+                        <div className="flex items-start justify-between gap-3 sm:gap-4 mt-1.5 pt-1.5 sm:mt-2 sm:pt-2 border-t border-dashed border-rose-100">
+                          <p className="text-xs sm:text-sm text-plum/70">{item.note2}</p>
+                          <span className="font-display text-sm sm:text-base font-semibold text-rose-500 whitespace-nowrap">{item.price2}</span>
                         </div>
                       )}
                     </li>
@@ -84,7 +84,7 @@ export default function CennikPage() {
           ))}
 
           <SectionReveal delay={0.1}>
-            <p className="text-center text-sm text-plum/60">
+            <p className="text-center text-xs sm:text-sm text-plum/70">
               Ceny mogą się różnić w zależności od indywidualnych potrzeb — dokładną wycenę ustalimy na konsultacji.
             </p>
           </SectionReveal>

@@ -13,8 +13,8 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-plum text-white/70 py-14 px-4 sm:px-6 lg:px-8" aria-label="Stopka">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-plum text-white/70 py-8 sm:py-14 px-4 sm:px-6 lg:px-8" aria-label="Stopka">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10">
         <div>
           <Logo dark />
           <p className="text-sm text-white/50 mt-3">Kosmetologia estetyczna · {CITY}</p>
@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-white/10 text-center text-xs text-white/40">
+      <div className="max-w-6xl mx-auto mt-6 pt-4 sm:mt-10 sm:pt-6 border-t border-white/10 text-center text-xs text-white/40">
         © {new Date().getFullYear()} NG Studio Kosmetologii. Wszelkie prawa zastrzeżone.
       </div>
     </footer>

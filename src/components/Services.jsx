@@ -32,32 +32,32 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="uslugi" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-rose-50/40" aria-label="Nasze usługi">
+    <section id="uslugi" className="py-10 sm:py-28 px-4 sm:px-6 lg:px-8 bg-rose-50/40" aria-label="Nasze usługi">
       <div className="max-w-6xl mx-auto">
-        <SectionReveal className="text-center mb-14">
-          <span className="inline-block bg-white text-rose-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 shadow-sm">Oferta</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-plum mb-4">Nasze Usługi</h2>
-          <p className="text-plum/70 text-lg max-w-lg mx-auto">Zabiegi kosmetologiczne dopasowane do Twoich potrzeb i oczekiwań</p>
+        <SectionReveal className="text-center mb-6 sm:mb-14">
+          <span className="inline-block bg-white text-rose-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-2 sm:mb-4 shadow-sm">Oferta</span>
+          <h2 className="font-display text-2xl sm:text-4xl font-semibold text-plum mb-2 sm:mb-4">Nasze Usługi</h2>
+          <p className="text-plum/70 text-base sm:text-lg max-w-lg mx-auto">Zabiegi kosmetologiczne dopasowane do Twoich potrzeb i oczekiwań</p>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {services.map(({ Icon, title, desc, color }, i) => (
             <SectionReveal key={title} delay={(i % 4) * 0.1}>
-              <div className="group bg-white border border-rose-100/80 rounded-2xl p-6 sm:p-7 hover:-translate-y-2 hover:shadow-soft transition-all duration-300 h-full">
-                <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon size={24} color="white" strokeWidth={1.8} aria-hidden="true" />
+              <div className="group bg-white border border-rose-100/80 rounded-2xl p-4 sm:p-7 hover:-translate-y-2 hover:shadow-soft transition-all duration-300 h-full">
+                <div className={`w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center mb-3 sm:mb-5 shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                  <Icon size={20} className="sm:w-6 sm:h-6" color="white" strokeWidth={1.8} aria-hidden="true" />
                 </div>
-                <h3 className="text-lg font-semibold text-plum mb-2 font-display">{title}</h3>
-                <p className="text-plum/70 text-sm leading-relaxed">{desc}</p>
+                <h3 className="text-sm sm:text-lg font-semibold text-plum mb-1 sm:mb-2 font-display">{title}</h3>
+                <p className="text-plum/70 text-xs sm:text-sm leading-relaxed">{desc}</p>
               </div>
             </SectionReveal>
           ))}
         </div>
 
-        <SectionReveal className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <SectionReveal className="text-center mt-6 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
           <Link
             to="/cennik"
-            className="inline-flex items-center gap-2 border-2 border-rose-200 text-rose-600 hover:bg-rose-50 px-7 py-3.5 rounded-xl font-semibold transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 border-2 border-rose-200 text-rose-600 hover:bg-rose-50 px-5 py-3 text-sm sm:px-7 sm:py-3.5 sm:text-base rounded-xl font-semibold transition-colors cursor-pointer"
           >
             Zobacz cennik <ArrowRight size={16} aria-hidden="true" />
           </Link>
@@ -65,7 +65,7 @@ export default function Services() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-7 py-3.5 rounded-xl font-semibold shadow-soft hover:-translate-y-1 transition-all duration-200 cursor-pointer"
+            className="inline-flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-5 py-3 text-sm sm:px-7 sm:py-3.5 sm:text-base rounded-xl font-semibold shadow-soft hover:-translate-y-1 transition-all duration-200 cursor-pointer"
           >
             Zapytaj o dostępne terminy <ArrowRight size={16} aria-hidden="true" />
           </a>
