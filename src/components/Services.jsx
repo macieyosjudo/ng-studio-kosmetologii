@@ -1,4 +1,5 @@
-import { Heart, Wand2, Syringe, Zap, Sparkles, Droplets, Eye, ClipboardCheck, GraduationCap, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Heart, Wand2, Syringe, Zap, Layers, Droplets, Eye, ClipboardCheck, GraduationCap, ArrowRight } from 'lucide-react'
 import SectionReveal from './SectionReveal'
 import { INSTAGRAM_URL } from '../constants'
 
@@ -23,14 +24,14 @@ const services = [
   },
   {
     Icon: Zap,
-    title: 'Stymulatory tkankowe',
-    desc: 'Pobudzenie naturalnej produkcji kolagenu dla długotrwałego efektu liftingu.',
+    title: 'Redukcja zmarszczek',
+    desc: 'Wygładzenie zmarszczek mimicznych okolicy oczu i czoła.',
     color: 'from-purple-400 to-fuchsia-500',
   },
   {
-    Icon: Sparkles,
-    title: 'Zabiegi na twarz',
-    desc: 'Zabiegi pielęgnacyjne i upiększające dopasowane indywidualnie do skóry klientki.',
+    Icon: Layers,
+    title: 'Wolumetria twarzy',
+    desc: 'Modelowanie brody, kości jarzmowych i linii żuchwy kwasem hialuronowym.',
     color: 'from-rose-300 to-purple-400',
   },
   {
@@ -83,7 +84,13 @@ export default function Services() {
           ))}
         </div>
 
-        <SectionReveal className="text-center mt-12">
+        <SectionReveal className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <Link
+            to="/cennik"
+            className="inline-flex items-center gap-2 border-2 border-rose-200 text-rose-600 hover:bg-rose-50 px-7 py-3.5 rounded-xl font-semibold transition-colors cursor-pointer"
+          >
+            Zobacz cennik <ArrowRight size={16} aria-hidden="true" />
+          </Link>
           <a
             href={INSTAGRAM_URL}
             target="_blank"

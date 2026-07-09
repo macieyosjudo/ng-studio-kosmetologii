@@ -1,12 +1,20 @@
+import { Link } from 'react-router-dom'
 import { MapPin, Phone } from 'lucide-react'
 import Logo from './Logo'
 import InstagramIcon from './InstagramIcon'
 import { INSTAGRAM_URL, CITY, ADDRESS, PHONE_DISPLAY, PHONE_TEL, HOURS, MAPS_SEARCH_URL } from '../constants'
 
+const quickLinks = [
+  { to: '/#o-nas', label: 'O nas' },
+  { to: '/#uslugi', label: 'Usługi' },
+  { to: '/cennik', label: 'Cennik' },
+  { to: '/galeria', label: 'Galeria' },
+]
+
 export default function Footer() {
   return (
     <footer className="bg-plum text-white/70 py-14 px-4 sm:px-6 lg:px-8" aria-label="Stopka">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <Logo dark />
           <p className="text-sm text-white/50 mt-3">Kosmetologia estetyczna · {CITY}</p>
@@ -19,6 +27,19 @@ export default function Footer() {
           >
             <InstagramIcon size={20} />
           </a>
+        </div>
+
+        <div>
+          <h3 className="font-display text-white text-base font-semibold mb-4">Nawigacja</h3>
+          <ul className="space-y-2 text-sm">
+            {quickLinks.map((l) => (
+              <li key={l.to}>
+                <Link to={l.to} className="hover:text-rose-300 transition-colors cursor-pointer">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>

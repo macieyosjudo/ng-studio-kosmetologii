@@ -1,15 +1,29 @@
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Stats from './components/Stats'
-import About from './components/About'
-import Services from './components/Services'
-import Gallery from './components/Gallery'
-import Testimonials from './components/Testimonials'
-import CtaSection from './components/CtaSection'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import CennikPage from './pages/CennikPage'
+import GaleriaPage from './pages/GaleriaPage'
 
-export default function App() {
+function ScrollManager() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash)
+      if (el) {
+        el.scrollIntoView({ behavior: 'instant', block: 'start' })
+        return
+      }
+    }
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [pathname, hash])
+
+  return null
+}
+
+function Layout() {
   return (
     <div className="min-h-screen bg-cream flex flex-col">
       <a
@@ -20,16 +34,35 @@ export default function App() {
       </a>
       <Navbar />
       <main id="main-content" className="flex-1">
-        <Hero />
-        <Stats />
-        <About />
-        <Services />
-        <Gallery />
-        <Testimonials />
-        <CtaSection />
-        <Contact />
+        <ScrollManager />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cennik" element={<CennikPage />} />
+          <Route path="/galeria" element={<GaleriaPage />} />
+          <Route
+            path="*"
+            element={
+              <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4 pt-24">
+                <div className="font-display text-6xl font-bold text-gradient mb-4">404</div>
+                <h1 className="text-2xl font-bold text-plum mb-4">Strona nie znaleziona</h1>
+                <p className="text-plum/60 mb-8">Ta strona nie istnieje lub została przeniesiona.</p>
+                <a href="/" className="bg-rose-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-rose-600 transition-colors cursor-pointer">
+                  Wróć na stronę główną
+                </a>
+              </div>
+            }
+          />
+        </Routes>
       </main>
       <Footer />
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   )
 }

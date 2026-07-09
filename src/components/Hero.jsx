@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { Star, ChevronDown } from 'lucide-react'
-import HeroArt from './HeroArt'
 import InstagramIcon from './InstagramIcon'
 import { INSTAGRAM_URL, CITY } from '../constants'
 
@@ -83,8 +82,18 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }}
             className="flex items-center justify-center"
           >
-            <div className="w-64 sm:w-80 lg:w-96">
-              <HeroArt />
+            <div className="relative w-56 sm:w-72 lg:w-80">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-rose-300/50 to-rose-400/30 blur-2xl scale-110" aria-hidden="true" />
+              <div className="relative aspect-square rounded-full overflow-hidden ring-4 ring-white shadow-soft">
+                <img
+                  src="/natalia-portrait.jpg"
+                  alt="Natalia — NG Studio Kosmetologii"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-16 h-16 rounded-full bg-white shadow-soft ring-1 ring-rose-100 flex items-center justify-center p-2.5">
+                <img src="/logo-mark.png" alt="" className="w-full h-full object-contain" aria-hidden="true" />
+              </div>
             </div>
           </motion.div>
         </div>

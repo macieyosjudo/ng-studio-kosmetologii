@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 import InstagramIcon from './InstagramIcon'
 import { INSTAGRAM_URL } from '../constants'
 
 const links = [
-  { href: '#o-nas', label: 'O nas' },
-  { href: '#uslugi', label: 'Usługi' },
-  { href: '#galeria', label: 'Galeria' },
-  { href: '#opinie', label: 'Opinie' },
-  { href: '#kontakt', label: 'Kontakt' },
+  { href: '/#o-nas', label: 'O nas' },
+  { href: '/#uslugi', label: 'Usługi' },
+  { href: '/cennik', label: 'Cennik' },
+  { href: '/galeria', label: 'Galeria' },
+  { href: '/#opinie', label: 'Opinie' },
+  { href: '/#kontakt', label: 'Kontakt' },
 ]
 
 export default function Navbar() {
@@ -30,16 +32,16 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between" aria-label="Nawigacja główna">
-        <a href="#top" className="cursor-pointer">
+        <Link to="/" className="cursor-pointer">
           <Logo />
-        </a>
+        </Link>
 
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-6 lg:gap-7">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="text-sm font-medium text-plum/80 hover:text-rose-500 transition-colors cursor-pointer">
+              <Link to={l.href} className="text-sm font-medium text-plum/80 hover:text-rose-500 transition-colors cursor-pointer">
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -72,13 +74,13 @@ export default function Navbar() {
           <ul className="flex flex-col gap-1">
             {links.map((l) => (
               <li key={l.href}>
-                <a
-                  href={l.href}
+                <Link
+                  to={l.href}
                   onClick={() => setOpen(false)}
                   className="block py-3 text-base font-medium text-plum/80 hover:text-rose-500 transition-colors cursor-pointer"
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
