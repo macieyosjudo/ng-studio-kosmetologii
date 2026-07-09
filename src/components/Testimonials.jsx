@@ -92,20 +92,20 @@ export default function Testimonials() {
           <p className="text-plum/70 text-base sm:text-lg">5.0/5 na podstawie ponad 20 opinii z Google i Panoramy Firm</p>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
           {reviews.map((r, i) => (
             <SectionReveal key={`${r.name}-${i}`} delay={(i % 3) * 0.08}>
-              <figure className="bg-white border border-rose-100/80 rounded-2xl p-4 sm:p-6 h-full flex flex-col shadow-sm hover:shadow-soft transition-shadow duration-300">
-                <Quote size={22} className="text-rose-300 mb-2 sm:mb-3" aria-hidden="true" />
-                <blockquote className="text-plum/75 text-sm leading-relaxed flex-1">
+              <figure className="bg-white border border-rose-100/80 rounded-2xl p-3 sm:p-6 h-full flex flex-col shadow-sm hover:shadow-soft transition-shadow duration-300">
+                <Quote size={22} className="hidden sm:block text-rose-300 mb-3" aria-hidden="true" />
+                <blockquote className="text-plum/75 text-[11px] sm:text-sm leading-snug sm:leading-relaxed flex-1 line-clamp-5 sm:line-clamp-none">
                   “{r.text}”
                 </blockquote>
-                <figcaption className="mt-3 pt-3 sm:mt-5 sm:pt-4 border-t border-rose-50 flex items-center justify-between">
-                  <div>
-                    <div className="text-sm font-semibold text-plum">{r.name}</div>
-                    <div className="text-xs text-plum/70">{r.source} · {r.time}</div>
+                <figcaption className="mt-2 pt-2 sm:mt-5 sm:pt-4 border-t border-rose-50 flex items-center justify-between gap-1">
+                  <div className="min-w-0">
+                    <div className="text-xs sm:text-sm font-semibold text-plum truncate">{r.name}</div>
+                    <div className="text-[10px] sm:text-xs text-plum/70 truncate">{r.source} · {r.time}</div>
                   </div>
-                  <div className="flex" aria-hidden="true">
+                  <div className="hidden sm:flex flex-shrink-0" aria-hidden="true">
                     {Array.from({ length: 5 }).map((_, s) => (
                       <Star key={s} size={13} className="fill-rose-400 text-rose-400" />
                     ))}

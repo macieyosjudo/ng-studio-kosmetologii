@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import { Star, ChevronDown } from 'lucide-react'
+import { Star, ChevronDown, Phone } from 'lucide-react'
 import InstagramIcon from './InstagramIcon'
-import { INSTAGRAM_URL, CITY } from '../constants'
+import { INSTAGRAM_URL, CITY, PHONE_TEL } from '../constants'
 
 export default function Hero() {
   return (
@@ -49,11 +49,29 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col gap-2 sm:flex-row flex-wrap sm:gap-3 mb-4 sm:mb-10"
             >
+              <div className="flex gap-2 sm:hidden">
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-1.5 bg-rose-500 hover:bg-rose-600 text-white px-3 py-3 text-sm rounded-xl font-semibold shadow-soft transition-all duration-200 cursor-pointer"
+                >
+                  <InstagramIcon size={16} />
+                  Instagram
+                </a>
+                <a
+                  href={`tel:${PHONE_TEL}`}
+                  className="flex-1 flex items-center justify-center gap-1.5 bg-white text-rose-600 border-2 border-rose-200 px-3 py-3 text-sm rounded-xl font-semibold hover:bg-rose-50 transition-all duration-200 cursor-pointer"
+                >
+                  <Phone size={16} />
+                  Zadzwoń
+                </a>
+              </div>
               <a
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-4 py-3 text-sm sm:px-6 sm:py-3.5 sm:text-base rounded-xl font-semibold shadow-soft hover:-translate-y-1 transition-all duration-200 cursor-pointer"
+                className="hidden sm:flex items-center justify-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-6 py-3.5 rounded-xl font-semibold shadow-soft hover:-translate-y-1 transition-all duration-200 cursor-pointer"
               >
                 <InstagramIcon size={18} />
                 Umów wizytę

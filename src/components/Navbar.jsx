@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Phone } from 'lucide-react'
 import Logo from './Logo'
 import InstagramIcon from './InstagramIcon'
-import { INSTAGRAM_URL } from '../constants'
+import { INSTAGRAM_URL, PHONE_TEL } from '../constants'
 
 const links = [
   { href: '/#o-nas', label: 'O nas' },
@@ -84,16 +84,26 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className="mt-3 flex items-center justify-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-5 py-3 rounded-full font-semibold text-sm shadow-soft transition-all duration-200 cursor-pointer"
-          >
-            <InstagramIcon size={16} />
-            Umów wizytę na Instagramie
-          </a>
+          <div className="mt-3 flex gap-2">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="flex-1 flex items-center justify-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-3 py-3 rounded-full font-semibold text-sm shadow-soft transition-all duration-200 cursor-pointer"
+            >
+              <InstagramIcon size={16} />
+              Instagram
+            </a>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              onClick={() => setOpen(false)}
+              className="flex-1 flex items-center justify-center gap-2 bg-white text-rose-600 border-2 border-rose-200 px-3 py-3 rounded-full font-semibold text-sm hover:bg-rose-50 transition-all duration-200 cursor-pointer"
+            >
+              <Phone size={16} />
+              Zadzwoń
+            </a>
+          </div>
         </div>
       )}
     </header>
