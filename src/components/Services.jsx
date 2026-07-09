@@ -1,27 +1,9 @@
 import { Link } from 'react-router-dom'
-import { Heart, Wand2, Syringe, Zap, Layers, Droplets, Eye, ClipboardCheck, GraduationCap, ArrowRight } from 'lucide-react'
+import { Syringe, Zap, Layers, Droplets, ArrowRight } from 'lucide-react'
 import SectionReveal from './SectionReveal'
 import { INSTAGRAM_URL } from '../constants'
 
 const services = [
-  {
-    Icon: Heart,
-    title: 'Modelowanie ust',
-    desc: 'Precyzyjne modelowanie i powiększanie ust kwasem hialuronowym, dopasowane do rysów twarzy.',
-    color: 'from-rose-400 to-rose-600',
-  },
-  {
-    Icon: Wand2,
-    title: 'Korekta ust',
-    desc: 'Naprawa i korekta efektów po zabiegach wykonanych w innych gabinetach.',
-    color: 'from-fuchsia-400 to-rose-500',
-  },
-  {
-    Icon: Syringe,
-    title: 'Mezoterapia igłowa',
-    desc: 'Odżywienie i rewitalizacja skóry poprzez precyzyjne mikroiniekcje z aktywnymi składnikami.',
-    color: 'from-rose-400 to-purple-400',
-  },
   {
     Icon: Zap,
     title: 'Redukcja zmarszczek',
@@ -35,28 +17,16 @@ const services = [
     color: 'from-rose-300 to-purple-400',
   },
   {
+    Icon: Syringe,
+    title: 'Mezoterapia igłowa',
+    desc: 'Odżywienie i rewitalizacja skóry poprzez precyzyjne mikroiniekcje z aktywnymi składnikami.',
+    color: 'from-rose-400 to-purple-400',
+  },
+  {
     Icon: Droplets,
     title: 'Wodorowe oczyszczanie twarzy',
     desc: 'Głębokie, delikatne oczyszczanie skóry twarzy z użyciem technologii wodorowej.',
     color: 'from-sky-300 to-rose-300',
-  },
-  {
-    Icon: Eye,
-    title: 'Stylizacja rzęs',
-    desc: 'Przedłużanie i stylizacja rzęs podkreślająca spojrzenie.',
-    color: 'from-rose-400 to-pink-500',
-  },
-  {
-    Icon: ClipboardCheck,
-    title: 'Konsultacja i pielęgnacja',
-    desc: 'Indywidualny dobór pielęgnacji domowej i doradztwo w zakresie kondycji skóry.',
-    color: 'from-purple-400 to-rose-400',
-  },
-  {
-    Icon: GraduationCap,
-    title: 'Szkolenia',
-    desc: 'Centrum szkoleniowe NG Studio — kursy modelowania ust i zabiegów kosmetologicznych.',
-    color: 'from-rose-500 to-fuchsia-600',
   },
 ]
 
@@ -70,9 +40,9 @@ export default function Services() {
           <p className="text-plum/70 text-lg max-w-lg mx-auto">Zabiegi kosmetologiczne dopasowane do Twoich potrzeb i oczekiwań</p>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {services.map(({ Icon, title, desc, color }, i) => (
-            <SectionReveal key={title} delay={(i % 3) * 0.1}>
+            <SectionReveal key={title} delay={(i % 4) * 0.1}>
               <div className="group bg-white border border-rose-100/80 rounded-2xl p-6 sm:p-7 hover:-translate-y-2 hover:shadow-soft transition-all duration-300 h-full">
                 <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform duration-300`}>
                   <Icon size={24} color="white" strokeWidth={1.8} aria-hidden="true" />
