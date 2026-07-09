@@ -1,4 +1,4 @@
-import { Heart, Wand2, Droplets, Sparkles, HeartHandshake, ClipboardCheck, ArrowRight } from 'lucide-react'
+import { Heart, Wand2, Syringe, Zap, Sparkles, Droplets, Eye, ClipboardCheck, GraduationCap, ArrowRight } from 'lucide-react'
 import SectionReveal from './SectionReveal'
 import { INSTAGRAM_URL } from '../constants'
 
@@ -16,16 +16,34 @@ const services = [
     color: 'from-fuchsia-400 to-rose-500',
   },
   {
+    Icon: Syringe,
+    title: 'Mezoterapia igłowa',
+    desc: 'Odżywienie i rewitalizacja skóry poprzez precyzyjne mikroiniekcje z aktywnymi składnikami.',
+    color: 'from-rose-400 to-purple-400',
+  },
+  {
+    Icon: Zap,
+    title: 'Stymulatory tkankowe',
+    desc: 'Pobudzenie naturalnej produkcji kolagenu dla długotrwałego efektu liftingu.',
+    color: 'from-purple-400 to-fuchsia-500',
+  },
+  {
+    Icon: Sparkles,
+    title: 'Zabiegi na twarz',
+    desc: 'Zabiegi pielęgnacyjne i upiększające dopasowane indywidualnie do skóry klientki.',
+    color: 'from-rose-300 to-purple-400',
+  },
+  {
     Icon: Droplets,
     title: 'Oczyszczanie wodorowe',
     desc: 'Głębokie, delikatne oczyszczanie skóry twarzy z użyciem technologii wodorowej.',
     color: 'from-sky-300 to-rose-300',
   },
   {
-    Icon: Sparkles,
-    title: 'Kosmetologia estetyczna',
-    desc: 'Zabiegi pielęgnacyjne i upiększające dopasowane indywidualnie do skóry klientki.',
-    color: 'from-rose-300 to-purple-400',
+    Icon: Eye,
+    title: 'Stylizacja rzęs',
+    desc: 'Przedłużanie i stylizacja rzęs podkreślająca spojrzenie.',
+    color: 'from-rose-400 to-pink-500',
   },
   {
     Icon: ClipboardCheck,
@@ -34,10 +52,10 @@ const services = [
     color: 'from-purple-400 to-rose-400',
   },
   {
-    Icon: HeartHandshake,
-    title: 'Opieka pozabiegowa',
-    desc: 'Pełne wsparcie i jasne wytyczne dotyczące pielęgnacji po każdym zabiegu.',
-    color: 'from-rose-400 to-pink-500',
+    Icon: GraduationCap,
+    title: 'Szkolenia',
+    desc: 'Centrum szkoleniowe NG Studio — kursy modelowania ust i zabiegów kosmetologicznych.',
+    color: 'from-rose-500 to-fuchsia-600',
   },
 ]
 

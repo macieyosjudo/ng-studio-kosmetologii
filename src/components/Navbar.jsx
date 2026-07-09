@@ -7,6 +7,7 @@ import { INSTAGRAM_URL } from '../constants'
 const links = [
   { href: '#o-nas', label: 'O nas' },
   { href: '#uslugi', label: 'Usługi' },
+  { href: '#galeria', label: 'Galeria' },
   { href: '#opinie', label: 'Opinie' },
   { href: '#kontakt', label: 'Kontakt' },
 ]

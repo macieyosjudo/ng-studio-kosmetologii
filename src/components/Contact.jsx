@@ -1,28 +1,31 @@
-import { MapPin, Clock } from 'lucide-react'
+import { MapPin, Phone, Clock } from 'lucide-react'
 import SectionReveal from './SectionReveal'
 import InstagramIcon from './InstagramIcon'
-import { INSTAGRAM_URL, MAPS_SEARCH_URL, CITY } from '../constants'
+import { INSTAGRAM_URL, MAPS_SEARCH_URL, ADDRESS, PHONE_DISPLAY, PHONE_TEL, HOURS } from '../constants'
 
 const cards = [
   {
     Icon: InstagramIcon,
     title: 'Instagram',
     desc: 'Najszybszy sposób na kontakt i rezerwację terminu.',
-    action: { label: '@ng.studiokosmetologii', href: INSTAGRAM_URL },
+    action: { label: '@ng.studiokosmetologii', href: INSTAGRAM_URL, external: true },
+  },
+  {
+    Icon: Phone,
+    title: 'Telefon',
+    desc: 'Zadzwoń, aby umówić wizytę lub zapytać o dostępne terminy.',
+    action: { label: PHONE_DISPLAY, href: `tel:${PHONE_TEL}`, external: false },
   },
   {
     Icon: MapPin,
-    title: 'Lokalizacja',
-    desc: `Gabinet znajduje się w ${CITY}. Dokładny adres i dojazd znajdziesz na Google Maps.`,
-    action: { label: 'Znajdź nas na mapie', href: MAPS_SEARCH_URL },
-  },
-  {
-    Icon: Clock,
-    title: 'Godziny i terminy',
-    desc: 'Aktualną dostępność terminów i godziny otwarcia sprawdzisz najszybciej na Instagramie.',
-    action: { label: 'Sprawdź dostępność', href: INSTAGRAM_URL },
+    title: 'Adres',
+    desc: ADDRESS,
+    action: { label: 'Znajdź nas na mapie', href: MAPS_SEARCH_URL, external: true },
   },
 ]
+
+// getDay(): 0 = Sunday ... 6 = Saturday; HOURS is ordered Monday-first
+const todayIndex = [6, 0, 1, 2, 3, 4, 5][new Date().getDay()]
 
 export default function Contact() {
   return (
@@ -34,7 +37,7 @@ export default function Contact() {
           <p className="text-plum/70 text-lg max-w-lg mx-auto">Skontaktuj się z nami i umów wizytę w NG Studio Kosmetologii</p>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
           {cards.map(({ Icon, title, desc, action }, i) => (
             <SectionReveal key={title} delay={i * 0.1}>
               <div className="bg-white border border-rose-100/80 rounded-2xl p-7 h-full flex flex-col items-center text-center shadow-sm hover:shadow-soft transition-shadow duration-300">
@@ -45,8 +48,8 @@ export default function Contact() {
                 <p className="text-plum/70 text-sm leading-relaxed mb-5">{desc}</p>
                 <a
                   href={action.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={action.external ? '_blank' : undefined}
+                  rel={action.external ? 'noopener noreferrer' : undefined}
                   className="mt-auto text-rose-600 hover:text-rose-700 font-semibold text-sm underline underline-offset-4 cursor-pointer"
                 >
                   {action.label}
@@ -55,6 +58,28 @@ export default function Contact() {
             </SectionReveal>
           ))}
         </div>
+
+        <SectionReveal delay={0.2}>
+          <div className="bg-white border border-rose-100/80 rounded-2xl p-7 sm:p-8">
+            <div className="flex items-center gap-2.5 mb-5">
+              <Clock size={20} className="text-rose-500" aria-hidden="true" />
+              <h3 className="font-display text-lg font-semibold text-plum">Godziny otwarcia</h3>
+            </div>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-2" role="list">
+              {HOURS.map(({ day, hours }, i) => (
+                <li
+                  key={day}
+                  className={`flex items-center justify-between gap-4 py-1.5 text-sm ${
+                    i === todayIndex ? 'text-rose-600 font-semibold' : 'text-plum/70'
+                  }`}
+                >
+                  <span>{day}</span>
+                  <span>{hours}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </SectionReveal>
       </div>
     </section>
   )

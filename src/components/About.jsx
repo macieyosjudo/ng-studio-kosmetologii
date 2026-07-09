@@ -15,8 +15,8 @@ export default function About() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         <SectionReveal direction="right" className="order-2 lg:order-1">
           <div className="relative">
-            <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-rose-100 to-rose-300/60 flex items-center justify-center shadow-soft">
-              <span className="font-display text-8xl text-white/90 select-none" aria-hidden="true">N</span>
+            <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-rose-50 to-rose-200/60 flex items-center justify-center shadow-soft p-12">
+              <img src="/logo.png" alt="NG Studio Kosmetologii" className="w-full h-auto" />
             </div>
             <div className="absolute -bottom-6 -right-4 sm:-right-8 bg-white rounded-2xl shadow-soft px-6 py-4 border border-rose-100">
               <div className="text-2xl font-bold text-gradient font-display">5.0★</div>

@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Stats from './components/Stats'
 import About from './components/About'
 import Services from './components/Services'
+import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import CtaSection from './components/CtaSection'
 import Contact from './components/Contact'
@@ -23,6 +24,7 @@ export default function App() {
         <Stats />
         <About />
         <Services />
+        <Gallery />
         <Testimonials />
         <CtaSection />
         <Contact />
