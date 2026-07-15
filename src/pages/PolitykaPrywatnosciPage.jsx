@@ -45,7 +45,18 @@ export default function PolitykaPrywatnosciPage() {
           </div>
 
           <div>
-            <h2 className="font-display text-lg sm:text-xl font-semibold text-plum mb-2">4. Odnośniki zewnętrzne</h2>
+            <h2 className="font-display text-lg sm:text-xl font-semibold text-plum mb-2">4. Logi serwera</h2>
+            <p>
+              Podczas korzystania ze strony, zapytania wysyłane przez Twoją przeglądarkę są automatycznie zapisywane
+              w logach serwera (m.in. adres IP, data i czas systemu, informacje o przeglądarce). Dane te są
+              przetwarzane wyłącznie w celach technicznych i administracyjnych (zapewnienie bezpieczeństwa
+              i stabilności strony) na podstawie naszego prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO)
+              i nie są wykorzystywane do Twojej identyfikacji.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display text-lg sm:text-xl font-semibold text-plum mb-2">5. Odnośniki zewnętrzne</h2>
             <p>
               Strona zawiera odnośniki do{' '}
               <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-rose-600 underline underline-offset-2">
@@ -57,7 +68,7 @@ export default function PolitykaPrywatnosciPage() {
           </div>
 
           <div>
-            <h2 className="font-display text-lg sm:text-xl font-semibold text-plum mb-2">5. Opinie klientek</h2>
+            <h2 className="font-display text-lg sm:text-xl font-semibold text-plum mb-2">6. Opinie klientek</h2>
             <p>
               Prezentowane w sekcji „Opinie” treści pochodzą z publicznie dostępnych profili firmy w serwisach
               Google i Panorama Firm i zostały opublikowane przez klientki dobrowolnie na tych platformach.
@@ -68,7 +79,7 @@ export default function PolitykaPrywatnosciPage() {
           </div>
 
           <div>
-            <h2 className="font-display text-lg sm:text-xl font-semibold text-plum mb-2">6. Twoje prawa</h2>
+            <h2 className="font-display text-lg sm:text-xl font-semibold text-plum mb-2">7. Twoje prawa</h2>
             <p>
               W związku z kontaktem poza stroną internetową (telefon, Instagram) przysługuje Ci prawo dostępu do
               danych, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz wniesienia skargi do Prezesa
@@ -77,7 +88,7 @@ export default function PolitykaPrywatnosciPage() {
           </div>
 
           <div>
-            <h2 className="font-display text-lg sm:text-xl font-semibold text-plum mb-2">7. Zmiany polityki</h2>
+            <h2 className="font-display text-lg sm:text-xl font-semibold text-plum mb-2">8. Zmiany polityki</h2>
             <p>
               Polityka prywatności może być okazjonalnie aktualizowana, np. w związku ze zmianą funkcjonalności
               strony. Aktualna wersja zawsze dostępna jest pod tym adresem.
