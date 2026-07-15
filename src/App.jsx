@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import CennikPage from './pages/CennikPage'
 import GaleriaPage from './pages/GaleriaPage'
+import PolitykaPrywatnosciPage from './pages/PolitykaPrywatnosciPage'
+import RegulaminPage from './pages/RegulaminPage'
 
 function ScrollManager() {
   const { pathname, hash } = useLocation()
@@ -39,6 +41,8 @@ function Layout() {
           <Route path="/" element={<Home />} />
           <Route path="/cennik" element={<CennikPage />} />
           <Route path="/galeria" element={<GaleriaPage />} />
+          <Route path="/polityka-prywatnosci" element={<PolitykaPrywatnosciPage />} />
+          <Route path="/regulamin" element={<RegulaminPage />} />
           <Route
             path="*"
             element={

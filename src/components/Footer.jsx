@@ -81,8 +81,16 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-6 pt-4 sm:mt-10 sm:pt-6 border-t border-white/10 text-center text-xs text-white/40">
-        © {new Date().getFullYear()} NG Studio Kosmetologii. Wszelkie prawa zastrzeżone.
+      <div className="max-w-6xl mx-auto mt-6 pt-4 sm:mt-10 sm:pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center text-xs text-white/40">
+        <span>© {new Date().getFullYear()} NG Studio Kosmetologii. Wszelkie prawa zastrzeżone.</span>
+        <span className="hidden sm:inline">·</span>
+        <Link to="/polityka-prywatnosci" className="hover:text-rose-300 transition-colors cursor-pointer underline underline-offset-2">
+          Polityka prywatności
+        </Link>
+        <span className="hidden sm:inline">·</span>
+        <Link to="/regulamin" className="hover:text-rose-300 transition-colors cursor-pointer underline underline-offset-2">
+          Regulamin
+        </Link>
       </div>
     </footer>
   )
