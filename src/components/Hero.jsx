@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { Star, ChevronDown, Phone } from 'lucide-react'
 import InstagramIcon from './InstagramIcon'
-import { INSTAGRAM_URL, CITY, PHONE_TEL } from '../constants'
+import FacebookIcon from './FacebookIcon'
+import { INSTAGRAM_URL, FACEBOOK_URL, CITY, PHONE_TEL } from '../constants'
 
 export default function Hero() {
   return (
@@ -68,12 +69,12 @@ export default function Hero() {
                 </a>
               </div>
               <a
-                href={INSTAGRAM_URL}
+                href={FACEBOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:flex items-center justify-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-6 py-3.5 rounded-xl font-semibold shadow-soft hover:-translate-y-1 transition-all duration-200 cursor-pointer"
               >
-                <InstagramIcon size={18} />
+                <FacebookIcon size={18} />
                 Umów wizytę
               </a>
               <a

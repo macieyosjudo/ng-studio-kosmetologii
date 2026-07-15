@@ -1,4 +1,5 @@
 export const INSTAGRAM_URL = 'https://www.instagram.com/ng.studiokosmetologii/'
+export const FACEBOOK_URL = 'https://www.facebook.com/ng.studiokosmetologi'
 export const CITY = 'Żywiec'
 export const ADDRESS = 'Komorowskich 95, 34-300 Żywiec'
 export const PHONE_DISPLAY = '533 003 857'

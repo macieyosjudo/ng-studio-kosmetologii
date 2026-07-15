@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import { Menu, X, Phone } from 'lucide-react'
 import Logo from './Logo'
 import InstagramIcon from './InstagramIcon'
-import { INSTAGRAM_URL, PHONE_TEL } from '../constants'
+import FacebookIcon from './FacebookIcon'
+import { INSTAGRAM_URL, FACEBOOK_URL, PHONE_TEL } from '../constants'
 
 const links = [
   { href: '/#o-nas', label: 'O nas' },
@@ -48,12 +49,12 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href={INSTAGRAM_URL}
+            href={FACEBOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-soft hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
           >
-            <InstagramIcon size={16} />
+            <FacebookIcon size={16} />
             Umów wizytę
           </a>
         </div>
